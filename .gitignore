@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 .env
+LICENSE
 *.local
 
 # Editor directories and files
