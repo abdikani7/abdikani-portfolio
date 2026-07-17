@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
-@import "tailwindcss,tailwind base,tailwind components,tailwind utilities";
-@imp
+@import "tailwindcss";
 
 /* 
 *BASE
@@ -11,6 +10,36 @@
  }
 
 body {
-  background-color: rgba(245, 246, 251, 1);
+  background-color: oklch(98.4% 0.019 200.873);
 }
 
+/* 
+*components
+ */
+
+/* 
+*menu-btn
+*/
+
+
+/* @layer components {
+ @import "tailwindcss";
+
+@layer components {
+  .menu-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: grid;
+    place-items: center;
+    background-color: rgb(250 250 250 / 0.1);
+    border-radius: 0.75rem;
+    box-shadow: inset 0 0 0 1px rgb(250 250 250 / 0.02);
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px);
+  }
+
+  .menu-btn:hover {
+    background-color: rgb(250 250 250 / 0.15);
+  }
+}
+} */
