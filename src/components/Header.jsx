@@ -9,13 +9,13 @@ const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
   return (
     <header className="fixed top-2 left-0 w-full h-20 flex items-center z-40">
-      <div className="max-w-screen-2xl w-full mx-auto px-4 flex justify-between items-center">
-        <h1 className="flex items-center">
+<div className="w-full flex justify-between items-center pl-0  pr-8">
+                <h1 className="flex items-center">
           <a href="/" className="logo-name flex items-center">
             <img
-              src="/public/image/logo-name2.png"
-              width={210}
-              height={45}
+            src="/image/logo-name2.png"              
+              width={211}
+              height={46}
               alt="Abdikani"
               className="block"
             />
@@ -42,18 +42,14 @@ const Header = () => {
 
         <a
           href="https://github.com/abdikani7"
-          className="px-8 btn btn-secondary max-md:hidden md:justify-self-end rounded-xl
-           flex items-center justify-center
-           transition-[transform,box-shadow,background-color] active:scale-95"
-        >
-          <img
-            width="35"
-            height="30"
-            src="https://img.icons8.com/ios-glyphs/240/github.png"
-            alt="github"
-            className="block"
-          />
-        </a>
+         className="px-8 btn btn-secondary hidden md:hidden items-center justify-center rounded-xl transition-[transform,box-shadow,background-color] active:scale-95">
+           <img
+           width="35"
+           height="30"
+           src="https://img.icons8.com/ios-glyphs/240/github.png"
+          alt="github"
+          className="block" />
+          </a>
       </div>
     </header>
   );
