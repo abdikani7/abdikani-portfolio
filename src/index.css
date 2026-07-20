@@ -17,6 +17,11 @@ body {
 *components
 */
 
+/* logo */
+
+
+
+
 /* navbar */
 .navbar {
   @apply absolute top-full mt-2 right-0 min-w-40 p-2
@@ -68,7 +73,7 @@ body {
 }
 
 .headline-l {
-  @apply text-xl top-1 mt-6 leading-tight font-semibold lg:text-[26px]
+  @apply text-2xl top-1 mt-6 leading-tight font-semibold lg:text-[26px]
    lg:leading-[1.15];
 }
 
@@ -94,7 +99,7 @@ body {
 }
 
 .btn-outline {
-    @apply h-11 bg-zinc-800 text-zinc-50 hover:bg-zinc-700 active:bg-zinc-800 
+    @apply h-11 bg-zinc-600 text-zinc-50 hover:bg-zinc-700 active:bg-zinc-600 
 
 }
 

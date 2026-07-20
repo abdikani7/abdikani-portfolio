@@ -1,5 +1,5 @@
 // components
-import { ButtonPrimary, ButtonOutline } from "./Button";
+import { ButtonOutline } from "./Button";
 const Hero = () => {
   return (
     <section id="hero" className="pt-28 lg:pt-36">
@@ -7,7 +7,7 @@ const Hero = () => {
             <div>
                 <div className="flex items-center gap-3">
                     <figure className="img-box w-9 h-9 rounded-l-lg">
-                        <img src="/public/image/favicon.png"
+                        <img src="/image/favicon.png"
                         width={40}
                         height={40}
                          alt="abdikani"
@@ -35,13 +35,12 @@ const Hero = () => {
                 </h2>
                 
                 <div className="flex items-center gap-3">
-                <ButtonPrimary 
+                {/* <ButtonPrimary 
                 label="Download CV"
-                icon="download" />
+                icon="download" /> */}
 
                 <ButtonOutline 
                 href="#about"
-                label="Scroll down"
                 icon="arrow_downward" />
                 
                 </div>
@@ -49,7 +48,7 @@ const Hero = () => {
 
             <div className=" hidden lg:block ">
                 <figure className=" w-100 h-100 rounded-l-lg">
-                    <img src="/public/image/img-banner.png" 
+                    <img src="/image/img-banner.png" 
                     width={656}
                     height={800}
                     alt="img-banner" className="rounded-xl shadow-xl/30  ml-25" />

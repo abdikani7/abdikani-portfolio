@@ -15,8 +15,11 @@ const Navbar = ({ navOpen }) => {
   
   }
 
-  useEffect(initActiveBox, []);
-  window.addEventListener('resize', initActiveBox);
+  useEffect(() => {
+    initActiveBox();
+    window.addEventListener('resize', initActiveBox);
+    return () => window.removeEventListener('resize', initActiveBox);
+  }, []);
 
   const activeCurrentLink = (event) =>{
   lastActiveLink.current?.classList.remove('active');

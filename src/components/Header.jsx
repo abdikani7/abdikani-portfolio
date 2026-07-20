@@ -9,11 +9,11 @@ const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
   return (
     <header className="fixed top-2 left-0 w-full h-20 flex items-center z-40">
-<div className="w-full flex justify-between items-center pl-0  pr-8">
+      <div className="w-full flex justify-between items-center pl-0   pr-11">
                 <h1 className="flex items-center">
           <a href="/" className="logo-name flex items-center">
             <img
-            src="/image/logo-name2.png"              
+            src="/image/logo-name4.png"              
               width={211}
               height={46}
               alt="Abdikani"
@@ -24,9 +24,7 @@ const Header = () => {
 
         <div className="relative flex items-center gap-1 sidebar">
           <button
-            className="menu-btn md:hidden w-8 h-8 grid place-items-center bg-zinc-50 rounded-xl
-             ring-inset ring-1 ring-slate-50 backdrop-blur-2xl hover:bg-zinc-200 transition-
-             [transform,box-shadow,background-color] active:scale-95"
+            className=" menu-btn md:hidden w-12 h-12 grid place-items-center rounded-xl bg-white ring-1 ring-zinc-300 shadow-lg hover:scale-105 active:scale-95 transition-all duration-200"
             onClick={() => setNavOpen((prev) => !prev)}
           >
             <img
@@ -39,17 +37,14 @@ const Header = () => {
           </button>
           <Navbar navOpen={navOpen} />
         </div>
-
-        <a
-          href="https://github.com/abdikani7"
-         className="px-8 btn btn-secondary hidden md:hidden items-center justify-center rounded-xl transition-[transform,box-shadow,background-color] active:scale-95">
-           <img
-           width="35"
-           height="30"
+        <a href="https://github.com/abdikani7"
+        className="hidden md:flex">
+        <img
            src="https://img.icons8.com/ios-glyphs/240/github.png"
-          alt="github"
-          className="block" />
-          </a>
+          width="35"
+          height="30"
+          alt="github"/>
+        </a>
       </div>
     </header>
   );
