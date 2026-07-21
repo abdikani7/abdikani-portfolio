@@ -28,11 +28,9 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/90 backdrop-blur-md shadow-md"
-          : "bg-white"
-      }`}
+      className={`sticky font-sans top-0 left-0 w-full z-50 transition-all duration-300 ${
+  isScrolled ? "backdrop-blur-md shadow-md" : "bg-transparent"
+}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
@@ -96,13 +94,13 @@ export default function Header() {
           isOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <nav className="flex flex-col px-4 py-4 gap-1">
+        <nav className="flex flex-col items-center text-center px-4 py-6 gap-6">
           {NAV_LINKS.map((link) => (
             <a
               key={link.label}
               href={link.href}
               onClick={closeMenu}
-              className="text-base font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded-lg px-3 py-3 transition-colors"
+              className="text-lg font-semibold text-slate-800 hover:text-slate-900 transition-colors"
             >
               {link.label}
             </a>

@@ -2,7 +2,7 @@
 import { ButtonOutline } from "./Button";
 const Hero = () => {
   return (
-<section id="hero" className="pt-6 lg:pt-10">        
+<section id="about" className="pt-6 lg:pt-10">        
     <div className="container lg:grid lg:grid-cols-2 items-center lg:gap-10">
             <div>
                 <div className="flex items-center gap-3">
@@ -24,17 +24,13 @@ const Hero = () => {
                 </div>
                 
                 <h2 className="headline-l max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-8 lg:mb-10 ">
-                Hi there! <a class="underline decoration-sky-500">I'm Abdikani,
-                </a> a driven Computer Science student
-                 with a knack for turning innovative concepts into powerful
-                  tech solutions. With a growing interest in Cybersecurity 
-                  and AI, I enjoy tackling complex challenges and building 
-                  scalable systems that create real impact — from 
-                  full-stack web platforms to embedded systems projects.
+                Hi! <a class="underline decoration-sky-500">I'm Abdikani,
+                </a> Building Fast, Modern & Responsive Websites Focused on clean 
+                design, performance, and great user experiences.
 
                 </h2>
                 
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 size-6 animate-bounce">
                 {/* <ButtonPrimary 
                 label="Download CV"
                 icon="download" /> */}
