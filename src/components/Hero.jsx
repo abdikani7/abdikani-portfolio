@@ -2,8 +2,8 @@
 import { ButtonOutline } from "./Button";
 const Hero = () => {
   return (
-    <section id="hero" className="pt-28 lg:pt-36">
-        <div className="container lg:grid lg:grid-cols-2 items-center lg:gap-10">
+<section id="hero" className="pt-6 lg:pt-10">        
+    <div className="container lg:grid lg:grid-cols-2 items-center lg:gap-10">
             <div>
                 <div className="flex items-center gap-3">
                     <figure className="img-box w-9 h-9 rounded-l-lg">
