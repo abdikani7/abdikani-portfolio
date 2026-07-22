@@ -72,10 +72,11 @@ html {
   -webkit-text-fill-color:transparent;
 }
 
-.headline-l {
+.headline-l, headline-2 {
   @apply text-4xl top-1 mt-6 leading-tight font-medium lg:text-[40px]
    lg:leading-[1.15];
 }
+
 
 .btn {
     display: inline-flex;
@@ -107,4 +108,12 @@ html {
 
 .section{
   @apply pt-20  lg:pt-32
+}
+
+
+/* section skill */
+
+.headline-2 {
+  @apply text-3xl lg:text-4xl lg:leading-tight font-semibold
+
 }

@@ -36,7 +36,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
 
           {/* Logo + Name */}
-          <a href="#home" className="flex items-center gap-1 shrink-0" onClick={closeMenu}>
+          <a href="#hero" className="flex items-center gap-1 shrink-0" onClick={closeMenu}>
             <div className="w-9 h-9 md:w-10 md:h-10 rounded-lg bg-slate-900 flex items-center justify-center">
               <span className="text-white font-bold text-sm md:text-base">C</span>
             </div>
@@ -62,7 +62,7 @@ export default function Header() {
           {/* Right side: GitHub icon + mobile toggle */}
           <div className="flex items-center gap-3 md:gap-5">
             <a
-              href="https://github.com/"
+              href="https://github.com/abdikani7"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
