@@ -74,6 +74,16 @@ const skillItem = [
     label: 'Chrome',
     desc: 'inspecting web apps',
   },
+  {
+  imgSrc: '/icons/mysql.svg',
+  label: 'MySQL',
+  desc: 'Database',
+},
+{
+  imgSrc: '/icons/apache.png',
+  label: 'Apache',
+  desc: 'Web Server',
+},
 ];
 const Skill = () => {
   return (

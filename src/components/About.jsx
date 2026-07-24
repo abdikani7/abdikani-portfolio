@@ -1,115 +1,114 @@
-import { useEffect, useState } from 'react';
+// components
+// import { ButtonOutline, ButtonPrimary } from "./Button";
 
-// Icons via icons8 (https://img.icons8.com) — swap the style/name to match your taste.
-// Format: https://img.icons8.com/{style}/{size}/{icon-name}.png
-const icons = {
-  shield: 'https://img.icons8.com/fluency/48/cyber-security.png',
-  ai: 'https://img.icons8.com/fluency/48/artificial-intelligence.png',
-  code: 'https://img.icons8.com/fluency/48/source-code.png',
-};
-
-const statLines = [
-  { value: '05', label: 'projects shipped' },
-  { value: '02', label: 'years building' },
+const stack = [
+  { name: "React", icon: "https://img.icons8.com/color/24/react-native.png" },
+  { name: "TypeScript", icon: "https://img.icons8.com/color/24/typescript.png" },
+  { name: "Tailwind CSS", icon: "https://img.icons8.com/color/24/tailwindcss.png" },
 ];
 
-const focusTags = [
-  { icon: icons.shield, label: 'cybersecurity' },
-  { icon: icons.ai, label: 'ai / ml' },
-  { icon: icons.code, label: 'full-stack systems' },
-];
-
-const About = () => {
-  const [typed, setTyped] = useState('');
-  const fullText = "Hi there! I'm Abdikani, a driven Computer Science student with a knack for turning innovative concepts into powerful tech solutions. With a growing interest in Cybersecurity and AI, I enjoy tackling complex challenges and building scalable systems that create real impact — from full-stack web platforms to embedded systems projects.";
-
-  useEffect(() => {
-    let i = 0;
-    const id = setInterval(() => {
-      i += 1;
-      setTyped(fullText.slice(0, i));
-      if (i >= fullText.length) clearInterval(id);
-    }, 18);
-    return () => clearInterval(id);
-  }, []);
+const Hero = () => {
+  // const scrollToAbout = (e) => {
+  //   e.preventDefault();
+  //   document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+  // };
 
   return (
-    <section id="about" className="section py-16 md:py-24">
+    <section id="about" className="relative pt-6 lg:pt-10 overflow-hidden">
       <style>{`
-        @keyframes scanline {
-          0%   { transform: translateY(-100%); opacity: 0; }
-          10%  { opacity: .6; }
-          90%  { opacity: .6; }
-          100% { transform: translateY(2200%); opacity: 0; }
+        @keyframes float-slow {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-14px); }
         }
-        @keyframes blink {
-          0%, 49% { opacity: 1; }
-          50%, 100% { opacity: 0; }
-        }
-        .scanline { animation: scanline 5s linear infinite; }
-        .cursor-blink { animation: blink 1s step-start infinite; }
+        .float-slow { animation: float-slow 6s ease-in-out infinite; }
       `}</style>
 
-      <div className="container max-w-5xl mx-auto px-4">
-        <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-white shadow-xl">
-          {/* scanning accent line */}
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-teal-500/60 scanline" />
+      {/* soft background accents */}
+      <div className="pointer-events-none absolute -top-24 -left-24 w-72 h-72 rounded-full bg-sky-200/40 blur-3xl" />
+      <div className="pointer-events-none absolute top-40 -right-20 w-72 h-72 rounded-full bg-emerald-200/30 blur-3xl" />
 
-          {/* terminal chrome */}
-          <div className="flex items-center gap-2 border-b border-slate-200 bg-slate-50 px-4 py-3">
-            <span className="h-3 w-3 rounded-full bg-slate-300" />
-            <span className="h-3 w-3 rounded-full bg-slate-300" />
-            <span className="h-3 w-3 rounded-full bg-slate-300" />
-            <span className="ml-3 font-mono text-xs text-slate-400">Abdikani.sh</span>
+      <div className="container relative lg:grid lg:grid-cols-2 items-center lg:gap-10">
+        <div>
+          {/* eyebrow */}
+          <div className="flex flex-wrap items-center gap-3 mb-5">
+            <span className="inline-flex items-center rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-medium tracking-wide text-sky-700">
+              Frontend Developer
+            </span>
+            
           </div>
 
-          <div className="grid md:grid-cols-[1.4fr_1fr]">
-            {/* LEFT: intro */}
-            <div className="p-6 md:p-10">
-              <p className="font-mono text-xs md:text-sm text-teal-600 mb-2">$ whoami</p>
-              <h2 className="font-mono text-xl md:text-3xl font-semibold text-slate-800 mb-6">
-                Abdikani <span className="text-slate-400">— CS Student</span>
-              </h2>
-
-              <p className="font-mono text-xs md:text-sm text-teal-600 mb-2">$ cat kani.txt</p>
-              <p className="font-sans text-slate-600 leading-relaxed md:text-lg md:max-w-[56ch]">
-                {typed}
-                <span className="cursor-blink text-teal-600">▍</span>
-              </p>
-            </div>
-
-            {/* RIGHT: stats + focus areas */}
-            <div className="border-t md:border-t-0 md:border-l border-slate-200 bg-slate-50/60 p-6 md:p-10">
-              <p className="font-mono text-xs text-teal-600 mb-3">$ stats --summary</p>
-              <div className="flex flex-wrap gap-6 mb-8">
-                {statLines.map(({ value, label }) => (
-                  <div key={label} className="font-mono">
-                    <span className="text-2xl md:text-4xl font-bold text-amber-600">{value}</span>
-                    <p className="text-xs md:text-sm text-slate-500 mt-1">{label}</p>
-                  </div>
-                ))}
-              </div>
-
-              <p className="font-mono text-xs text-teal-600 mb-3">$ focus --areas</p>
-              <div className="flex flex-col gap-2">
-                {focusTags.map(({ icon, label }) => (
-                  <div
-                    key={label}
-                    className="flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2"
-                  >
-                    <img src={icon} alt="" width={18} height={18} />
-                    <span className="font-mono text-xs md:text-sm text-slate-600">
-                      --{label.replace(/\s/g, '-')}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
+          <div className="flex items-center gap-3 mb-5">
+            <figure className="img-box w-9 h-9 rounded-full overflow-hidden ring-2 ring-white shadow-sm">
+              <img
+                src="/image/favicon.png"
+                width={40}
+                height={40}
+                alt="abdikani"
+                className="img-cover"
+              />
+            </figure>
+            <div className="flex items-center gap-1.5 text-zinc-600 text-sm tracking-wide">
+              <span className="relative w-2 h-2 rounded-full bg-emerald-400">
+                <span className="absolute inset-0 rounded-full bg-emerald-400 animate-ping" />
+              </span>
+              Available for work 
+            </div> 
           </div>
+
+          <h2 className="headline-l max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mb-6">
+            Hi!{" "}
+            <span className="relative inline-block">
+              <span className="absolute inset-x-0 bottom-1 h-3 bg-sky-200/70 -rotate-1" />
+              <span className="relative">I'm Abdikani,</span>
+            </span>{" "}
+            Building Fast, Modern &amp; Responsive Websites Focused on clean
+            design, performance, and great user experiences.
+          </h2>
+
+          {/* tech stack chips */}
+          <div className="flex flex-wrap items-center gap-2 mb-8 lg:mb-10">
+            {stack.map(({ name, icon }) => (
+              <span
+                key={name}
+                className="inline-flex items-center gap-1.5 rounded-full border border-zinc-200 bg-white px-3 py-1 text-xs text-zinc-600 shadow-sm"
+              >
+                <img src={icon} alt="" width={14} height={14} />
+                {name}
+              </span>
+            ))}
+          </div>
+
+          {/* <div className="flex items-center gap-4">
+            <ButtonPrimary href="/cv/Abdikani-CV.pdf" label="Download CV" icon="download" />
+            <ButtonOutline href="#about" icon="arrow_downward" onClick={scrollToAbout} />
+          </div> */}
+        </div>
+
+        <div className="md:hidden lg:block relative">
+          {/* decorative ring behind image */}
+          <div className="absolute -inset-4 rounded-2xl border border-dashed border-sky-200" />
+
+          <figure className="float-slow w-full max-w-md mx-auto lg:mx-0 lg:ml-auto relative">
+            <img
+              src="/image/img-banner.png"
+              width={656}
+              height={800}
+              alt="img-banner"
+              className="w-full h-auto rounded-xl shadow-xl/30"
+            />
+
+            {/* floating stat card */}
+            <div className="absolute -bottom-6 -left-6 flex items-center gap-3 rounded-xl border border-zinc-100 bg-white px-4 py-3 shadow-lg">
+              <span className="text-2xl font-bold text-sky-600">2+</span>
+              <span className="text-xs text-zinc-500 leading-tight max-w-[10ch]">
+                Years building software
+              </span>
+            </div>
+          </figure>
         </div>
       </div>
     </section>
   );
 };
 
-export default About;
+export default Hero;

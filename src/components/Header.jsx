@@ -7,7 +7,7 @@ const ICON_CLOSE = "https://img.icons8.com/ios-filled/50/000000/multiply.png";
 
 const NAV_LINKS = [
   { label: "About", href: "#about" },
-  { label: "Project", href: "#project" },
+  { label: "Project", href: "#projects" },
   { label: "Articles", href: "#articles" },
   { label: "Contact", href: "#contact" },
 ];
@@ -36,14 +36,13 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
 
           {/* Logo + Name */}
-          <a href="#hero" className="flex items-center gap-1 shrink-0" onClick={closeMenu}>
-            <div className="w-9 h-9 md:w-10 md:h-10 rounded-lg bg-slate-900 flex items-center justify-center">
-              <span className="text-white font-bold text-sm md:text-base">C</span>
-            </div>
-            <span className="text-lg md:text-xl font-bold text-slate-900 tracking-tight">
-              kani
-            </span>
-          </a>
+          <a href="#about" className="flex items-center shrink-0" onClick={closeMenu}>
+          <img
+          src="/public/image/favicon.png"
+          alt="Kani Logo"
+          className="rounded-full w-9 h-9 sm:w-11 sm:h-12 border-dotted border-2 border-black object-cover"
+  />
+</a>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-15">

@@ -117,3 +117,19 @@ html {
   @apply text-3xl lg:text-4xl lg:leading-tight font-semibold
 
 }
+
+/* project section */
+
+.title-1{
+  @apply text-[22px] font-normal
+}
+
+/* headline-3 {
+  @apply text-4xl top-1 mt-6 leading-tight font-medium lg:text-[40px]
+   lg:leading-[1.15];
+}
+
+.headline-3 {
+  @apply text-3xl lg:text-4xl lg:leading-tight font-semibold
+
+} */
